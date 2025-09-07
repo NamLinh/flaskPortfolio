@@ -3,12 +3,20 @@
 {% block title %}Projects - My Portfolio{% endblock %}
 
 {% block content %}
-<h1>My Projects</h1>
-<ul>
+<div class="container mt-5">
+  <h1 class="mb-4">My Projects</h1>
+  <div class="row">
     {% for project in projects %}
-        <li>
-            <a href="{{ project.url }}" target="_blank">{{ project.name }}</a>
-        </li>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.desc }}</p>
+            <a href="{{ project.url }}" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
+          </div>
+        </div>
+      </div>
     {% endfor %}
-</ul>
+  </div>
+</div>
 {% endblock %}

@@ -1,17 +1,72 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
+}
+
+/* Light mode (default) */
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+
+#page-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-wrap {
+    flex: 1;
+}
+
+.container {
+    flex: 1;
 }
 nav {
     background: #333;
     padding: 1em;
 }
 nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #0d6efd;
 }
 .content {
     padding: 20px;
+}
+
+.home-page #content-wrap {
+    padding-bottom: 2rem; /* adds extra space so footer drops */
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f !important;
+}
+
+body.dark-mode .card {
+    background-color: #1f1f1f;
+    color: #f8f9fa;
+}
+
+body.dark-mode .btn-outline-primary {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
 }
